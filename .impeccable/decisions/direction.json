@@ -1,0 +1,241 @@
+{
+  "title": "Elige la forma visual del taller",
+  "question": "El simulador mostrará una cotización farmacéutica funcional y las capas Java que la producen. Elige su mundo visual, pide otra ronda o continúa con el estilo esperado para un cotizador.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Expediente de liberación térmica",
+      "kicker": "THE ROLL",
+      "lineage": "registros farmacéuticos de control de calidad",
+      "thesis": "Un expediente de envío muestra cada servicio como una hoja de control con su costo.",
+      "palette": ["#fffdf8", "#24304a", "#e36b50", "#719552"],
+      "materials": ["papel de archivo", "pestañas de inspección", "duplicado autocopiativo"],
+      "viewport": "La ficha del envío ocupa el centro; a su lado, un recibo acumula servicios, precio y plazo en el orden de composición.",
+      "risk": "La documentación puede parecer inerte si las pestañas elegidas no alteran visiblemente el expediente.",
+      "raised": [
+        {
+          "from": "Exposure Record (declined)",
+          "raise": "Selección y conflicto también se distinguen con tramas y contornos, no solo con color."
+        },
+        {
+          "from": "Convention Catalog (declined)",
+          "raise": "Los servicios se eligen en unidades completas que reordenan sin romperse en pantallas estrechas."
+        },
+        {
+          "from": "Bitmap Specimen (declined)",
+          "raise": "Los nombres reales de las clases Java tienen jerarquía y se leen como parte del producto."
+        }
+      ],
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "barra de taller", "x": 0, "y": 0, "w": 12, "h": 1},
+          {"label": "pestañas", "x": 0, "y": 1, "w": 1, "h": 9, "accent": true},
+          {"label": "ficha de envío", "x": 1, "y": 1, "w": 7, "h": 9},
+          {"label": "recibo y total", "x": 8, "y": 1, "w": 4, "h": 5, "accent": true},
+          {"label": "capas Java", "x": 8, "y": 6, "w": 4, "h": 4}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Mesa de armado térmico",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "mesa de empaque con componentes de un contenedor médico aislado",
+      "thesis": "Cada decorador se vuelve una pieza que envuelve un envío activo sobre la mesa de empaque.",
+      "palette": ["#102c49", "#28b9ad", "#e2e7e4", "#e9af48"],
+      "materials": ["espuma aislante", "aluminio cepillado", "sellos térmicos"],
+      "viewport": "El paquete abierto y sus envolturas dominan la pantalla; a la derecha se suman precio y plazo, y debajo aparece la cadena exacta de objetos Java.",
+      "risk": "El objeto físico puede eclipsar la explicación si no se ven los nombres y límites de cada wrapper.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "identidad y navegación", "x": 0, "y": 0, "w": 12, "h": 1},
+          {"label": "ensamble de contenedor", "x": 0, "y": 1, "w": 8, "h": 7, "accent": true},
+          {"label": "cotización viva", "x": 8, "y": 1, "w": 4, "h": 4},
+          {"label": "controles de servicio", "x": 8, "y": 5, "w": 4, "h": 3},
+          {"label": "cadena de wrappers Java", "x": 0, "y": 8, "w": 12, "h": 2}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-manual",
+      "label": "Manual técnico en láminas",
+      "verdict": "wins",
+      "lineage": "manuales de referencia con hojas de acetato perforadas sobre separadores de color",
+      "thesis": "La clase base vive en el tablero y cada servicio es una lámina transparente que la envuelve.",
+      "palette": ["#e8c33f", "#171715", "#f6f1e5", "#c97c38"],
+      "materials": ["acetato lechoso", "tablero amarillo", "perforaciones y pestañas"],
+      "viewport": "Una hoja de envío ocupa la retícula manual; las capas seleccionadas se apilan sobre ella y el costo final queda en el margen de corte.",
+      "case": "Gana en identificación con el taller de Java y en claridad: envoltura física, `Shipment` y cada decorador comparten la misma composición.",
+      "risk": "El acetato se vuelve adorno si una lámina no muestra su clase Java y el cambio concreto que agrega.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "manual y pestañas", "x": 0, "y": 0, "w": 12, "h": 1},
+          {"label": "riel de secciones", "x": 0, "y": 1, "w": 1, "h": 9, "accent": true},
+          {"label": "hojas de composición", "x": 1, "y": 1, "w": 7, "h": 7, "accent": true},
+          {"label": "cotización", "x": 8, "y": 1, "w": 4, "h": 4},
+          {"label": "clases Java", "x": 8, "y": 5, "w": 4, "h": 5}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-manual.webp",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "challenger-signage",
+      "label": "Señales de carga prioritaria",
+      "verdict": "competitive",
+      "lineage": "bandas de orientación de terminal aeroportuaria",
+      "thesis": "Cada decisión del envío se lee en una señal de alto contraste y el itinerario se actualiza paso a paso.",
+      "palette": ["#ffcf00", "#080808", "#f5f5f2", "#d9dcde"],
+      "materials": ["panel amarillo", "marco de aluminio", "pictogramas de carga"],
+      "viewport": "Una banda monumental nombra el envío; paneles sucesivos indican temperatura, custodia y entrega, mientras un resumen de precio permanece fijo.",
+      "case": "Sostiene el reconocimiento de la escena logística y la orientación de la tarea; el paralelismo con wrappers necesita una explicación visible.",
+      "risk": "Puede explicar muy bien los pasos de entrega y demasiado poco la composición de objetos.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "banda de destino", "x": 0, "y": 0, "w": 12, "h": 2, "accent": true},
+          {"label": "decisiones y señales", "x": 0, "y": 2, "w": 8, "h": 7},
+          {"label": "estado de carga", "x": 8, "y": 2, "w": 4, "h": 4, "accent": true},
+          {"label": "total y acción", "x": 8, "y": 6, "w": 4, "h": 3},
+          {"label": "navegación", "x": 0, "y": 9, "w": 12, "h": 1}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-signage.webp",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding.webp"
+    },
+    {
+      "id": "challenger-orienteering",
+      "label": "Mapa del corredor frío",
+      "verdict": "competitive",
+      "lineage": "mapas de orientación con terreno y trazado de ruta en capas",
+      "thesis": "El corredor logístico permanece como terreno y los servicios del envío se superponen como capas separadas.",
+      "palette": ["#ffffff", "#a5b36a", "#ffd24d", "#5fa7d6", "#7b2cbf", "#8c5a2b"],
+      "materials": ["curvas de nivel", "trazado violeta", "leyenda de símbolos"],
+      "viewport": "El itinerario ocupa el mapa principal; su leyenda separa ruta base y servicios superpuestos, con una cotización junto a la escala.",
+      "case": "Aporta lectura geográfica y separa con precisión la ruta base de las capas añadidas, aunque el mapa compite con el aprendizaje de Decorator.",
+      "risk": "La cartografía puede sugerir destinos y transportistas reales; los trazados deberán identificarse como ejemplos sintéticos.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "cabecera y etapa", "x": 0, "y": 0, "w": 12, "h": 1},
+          {"label": "leyenda de capas", "x": 0, "y": 1, "w": 3, "h": 9},
+          {"label": "mapa y ruta", "x": 3, "y": 1, "w": 9, "h": 9, "accent": true}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-orienteering.webp",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-orienteering-map-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/notation-diagram-systems-orienteering-map.webp"
+    },
+    {
+      "id": "challenger-exposure",
+      "label": "Registro de exposición",
+      "verdict": "declined",
+      "lineage": "hojas de registro de impresión en cuarto oscuro con transparencias superpuestas",
+      "thesis": "Cada servicio se suma como una lámina de exposición con peso y delta medible.",
+      "palette": ["#f2f0e8", "#45484a", "#cf39b0"],
+      "materials": ["hojas traslúcidas", "tramas cruzadas", "escala tonal"],
+      "viewport": "Una hoja de control contiene la cotización y las transparencias muestran el cambio aportado por cada servicio.",
+      "case": "Declinada: el laboratorio fotográfico no representa una escena logística reconocible ni explica mejor el envío que el expediente.",
+      "kept": "Estados de conflicto y selección legibles mediante tramas además de color.",
+      "risk": "El lenguaje de exposición fotográfica podría confundirse con datos de temperatura.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "escala de lectura", "x": 0, "y": 0, "w": 12, "h": 1},
+          {"label": "hojas superpuestas", "x": 0, "y": 1, "w": 8, "h": 9, "accent": true},
+          {"label": "leyenda de dosis", "x": 8, "y": 1, "w": 4, "h": 9}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-exposure.webp",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-exposure-record-zone-sheets-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/operate-b-exposure-record-zone-sheets.webp"
+    },
+    {
+      "id": "challenger-catalog",
+      "label": "Catálogo de servicios por celdas",
+      "verdict": "declined",
+      "lineage": "catálogos de convenciones con ilustraciones y códigos de mesa en una retícula",
+      "thesis": "Cada servicio disponible ocupa una celda y las selecciones se marcan sobre la cuadrícula.",
+      "palette": ["#121212", "#f5f2e9", "#e05a42"],
+      "materials": ["papel de bajo gramaje", "retícula numerada", "marcas de tinta"],
+      "viewport": "Una tabla de servicios sintéticos comparte plano con el envío base y su código de composición.",
+      "case": "Declinada: la identidad de un catálogo de feria no conecta con medicamentos ni muestra el cálculo mejor que las otras direcciones.",
+      "kept": "Controles que conservan celdas completas y el orden elegido en móvil.",
+      "risk": "La densidad del catálogo puede volver pequeños los nombres y los estados.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "índice", "x": 0, "y": 0, "w": 2, "h": 10},
+          {"label": "celdas de servicio", "x": 2, "y": 0, "w": 10, "h": 8, "accent": true},
+          {"label": "selecciones", "x": 2, "y": 8, "w": 10, "h": 2}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-catalog.webp",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog.webp"
+    },
+    {
+      "id": "challenger-bitmap",
+      "label": "Especimen de clases Java",
+      "verdict": "declined",
+      "lineage": "pliegos tipográficos de Emigre con alfabetos bitmap ampliados",
+      "thesis": "Los nombres de clases y métodos se muestran como un espécimen tipográfico a varias escalas.",
+      "palette": ["#ffffff", "#111111", "#c53a33"],
+      "materials": ["trama de puntos", "papel de imprenta", "tipografía bitmap"],
+      "viewport": "Los objetos y servicios Java se comparan a escala editorial mientras un margen presenta el precio resultante.",
+      "case": "Declinada: eleva la identificación con código, pero se pierde la tarea de configurar un envío y no supera la claridad del manual.",
+      "kept": "Nombres técnicos con tamaño y contraste suficientes para leerse como contenido central.",
+      "risk": "El bitmap puede parecer un efecto retro si no responde a escala y contenido reales.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "muestra bitmap", "x": 0, "y": 0, "w": 12, "h": 4, "accent": true},
+          {"label": "cadena y código", "x": 0, "y": 4, "w": 8, "h": 6},
+          {"label": "recibo", "x": 8, "y": 4, "w": 4, "h": 6}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-bitmap.webp",
+      "hero": "https://impeccable.style/worlds/cards/emigre-bitmap-specimen-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/emigre-bitmap-specimen.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": true},
+  "canon": true,
+  "canonCard": {
+    "label": "Cotizador de envíos estándar",
+    "lineage": "configuradores web habituales para servicios de entrega",
+    "thesis": "Una cuadrícula convencional presenta los datos, las opciones y el total con familiaridad.",
+    "palette": ["#ffffff", "#111827", "#2563eb", "#e5e7eb"],
+    "materials": ["superficies limpias", "líneas finas", "tabla de datos"],
+    "viewport": "Formulario de envío a la izquierda; opciones y resumen de precio alineados a la derecha.",
+    "risk": "La familiaridad puede separar las opciones del aprendizaje de Decorator.",
+    "wireframe": {
+      "cols": 12,
+      "rows": 10,
+      "regions": [
+        {"label": "navegación", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "datos de envío", "x": 0, "y": 1, "w": 6, "h": 6},
+        {"label": "opciones", "x": 6, "y": 1, "w": 6, "h": 6, "accent": true},
+        {"label": "total", "x": 0, "y": 7, "w": 12, "h": 3}
+      ]
+    },
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true
+}
