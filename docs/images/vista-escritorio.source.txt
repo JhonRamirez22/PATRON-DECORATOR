@@ -1,0 +1,6 @@
+Captura de la aplicación Celsius creada para este proyecto.
+Origen: http://127.0.0.1:8080/
+Fecha: 2026-10-02, America/Bogota.
+Herramienta: navegador integrado de Codex.
+Viewport solicitado: 1440 x 1000; anchura CSS observada: 1600 por escala del navegador.
+Imagen propia; no contiene fotografías ni recursos externos.

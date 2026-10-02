@@ -1,0 +1,59 @@
+{
+  "shipment": {
+    "origin": "Bogotá",
+    "destination": "Medellín",
+    "weightKg": 2,
+    "declaredValue": 1500000
+  },
+  "base": {
+    "total": 36400,
+    "deliveryHours": 48,
+    "lines": [
+      {
+        "id": "base",
+        "name": "Transporte interurbano",
+        "className": "StandardShipment",
+        "description": "Tarifa de ruta + $4.200 por kg",
+        "amount": 36400
+      }
+    ],
+    "capabilities": [
+      "Transporte entre ciudades"
+    ],
+    "expression": "new StandardShipment(context)"
+  },
+  "decorated": {
+    "total": 65280,
+    "deliveryHours": 36,
+    "lines": [
+      {
+        "id": "base",
+        "name": "Transporte interurbano",
+        "className": "StandardShipment",
+        "description": "Tarifa de ruta + $4.200 por kg",
+        "amount": 36400
+      },
+      {
+        "id": "insurance",
+        "name": "Seguro de carga",
+        "className": "InsuranceDecorator",
+        "description": "1,2 % del valor declarado; mínimo $8.000",
+        "amount": 18000
+      },
+      {
+        "id": "priority",
+        "name": "Manejo prioritario",
+        "className": "PriorityDecorator",
+        "description": "20 % del subtotal interior: $54400",
+        "amount": 10880
+      }
+    ],
+    "capabilities": [
+      "Transporte entre ciudades",
+      "Cobertura ilustrativa del valor declarado",
+      "Atención prioritaria: 12 horas menos"
+    ],
+    "expression": "new PriorityDecorator(new InsuranceDecorator(new StandardShipment(context), context.declaredValue()))"
+  },
+  "disclaimer": "Tarifas, plazos y coberturas simulados para un taller académico."
+}
